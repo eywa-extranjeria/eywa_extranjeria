@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de extranjería: permisos de residencia, nacionalidad española, reagrupación familiar, asilo y más. EYWA Extranjería Valencia.">
+    <title>Servicios | EYWA Extranjería - Derecho de Migración</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['DM Serif Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        eywa: {
+                            50: '#f6f7f6', 100: '#e3e8e4', 200: '#c7d2c9',
+                            300: '#a3b5a6', 400: '#7a917f', 500: '#5c7561',
+                            600: '#485e4c', 700: '#3c4d3f', 800: '#313f34', 900: '#2a352c',
+                        },
+                        earth: {
+                            50: '#faf8f6', 100: '#f0ebe5', 200: '#ddd4c8',
+                            300: '#c4b6a6', 400: '#a89480', 500: '#8b7862',
+                            600: '#6b5a48', 700: '#574a3c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navegación (igual que index.html pero con "Servicios" activo) -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="glass-nav border-b border-eywa-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                            <span class="text-[10px] text-eywa-600 tracking-[0.2em] uppercase font-medium">Extranjería</span>
+                        </div>
+                    </a>
+                    
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="servicios.html" class="nav-link active">Servicios</a>
+                        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                        <a href="testimonios.html" class="nav-link">Testimonios</a>
+                        <a href="contacto.html" class="btn-primary text-sm py-3 px-6">Consulta Gratis</a>
+                    </div>
+
+                    <button class="lg:hidden touch-target flex items-center justify-center text-eywa-800" id="menu-btn" aria-label="Menú">
+                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center p-6 border-b border-eywa-100">
+                    <span class="font-serif text-xl font-bold text-eywa-900">EYWA</span>
+                    <button class="touch-target" id="close-menu">
+                        <i class="fas fa-times text-xl text-eywa-800"></i>
+                    </button>
+                </div>
+                <div class="flex-1 flex flex-col justify-center px-6 space-y-6">
+                    <a href="index.html" class="text-2xl font-serif text-eywa-900">Inicio</a>
+                    <a href="servicios.html" class="text-2xl font-serif text-eywa-900">Servicios</a>
+                    <a href="sobre-nosotros.html" class="text-2xl font-serif text-eywa-900">Sobre Nosotros</a>
+                    <a href="testimonios.html" class="text-2xl font-serif text-eywa-900">Testimonios</a>
+                    <a href="contacto.html" class="btn-primary text-center mt-4">Consulta Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de página -->
+    <section class="pt-32 pb-16 bg-eywa-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center reveal">
+            <span class="text-earth-600 font-semibold tracking-wider uppercase text-sm">Servicios</span>
+            <h1 class="font-serif text-4xl lg:text-6xl font-bold text-eywa-900 mt-4">Nuestros <span class="font-serif-italic text-eywa-600">servicios</span></h1>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">Asesoramiento especializado en todas las materias de derecho de extranjería, con un enfoque humano y profesional.</p>
+        </div>
+    </section>
+
+    <!-- Servicios Detallados -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-24">
+            
+            <!-- Permisos de Residencia -->
+            <div id="residencia" class="grid lg:grid-cols-2 gap-12 items-center reveal">
+                <div class="order-2 lg:order-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-eywa-500 to-eywa-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold text-eywa-900 mb-4">Permisos de Residencia</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Gestión completa de autorizaciones de residencia y trabajo. Te acompañamos en todo el proceso, desde la preparación de la documentación hasta la obtención de la tarjeta.</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Arraigo social:</strong> Para quienes llevan 3 años en España y tienen oferta de empleo o vínculos familiares.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Arraigo laboral:</strong> Si has trabajado 2 años de forma discontinua o 6 meses de forma continua.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Cuenta propia:</strong> Autorización para trabajadores por cuenta propia y emprendedores.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Tarjeta comunitaria:</strong> Para familiares de ciudadanos de la UE.
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="contacto.html" class="btn-primary">Consultar sobre residencia</a>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80" alt="Permisos de residencia" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
+                </div>
+            </div>
+
+            <!-- Nacionalidad -->
+            <div id="nacionalidad" class="grid lg:grid-cols-2 gap-12 items-center reveal">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=800&auto=format&fit=crop&q=80" alt="Nacionalidad española" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
+                </div>
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-earth-500 to-earth-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold text-eywa-900 mb-4">Nacionalidad Española</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Te guiamos en el proceso de obtención de la nacionalidad española por todas las vías legales disponibles, preparando tu expediente para maximizar las posibilidades de éxito.</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Por residencia:</strong> Después de 10 años de residencia legal (2 años para iberoamericanos).
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Por opción:</strong> Para hijos de españoles nacidos en el extranjero.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Carta de naturaleza:</strong> Casos excepcionales concedidos por el Gobierno.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Preparación exámenes:</strong> CCSE y DELE para la nacionalidad.
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="contacto.html" class="btn-primary bg-gradient-to-r from-earth-600 to-earth-500">Consultar sobre nacionalidad</a>
+                </div>
+            </div>
+
+            <!-- Reagrupación -->
+            <div id="reagrupacion" class="grid lg:grid-cols-2 gap-12 items-center reveal">
+                <div class="order-2 lg:order-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-eywa-500 to-eywa-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold text-eywa-900 mb-4">Reagrupación Familiar</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Reunifica a tu familia en España. Gestionamos todo el proceso de reagrupación para cónyuges, hijos, ascendientes y otros familiares a cargo.</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Cónyuges y parejas:</strong> Incluidas parejas de hecho inscritas o no inscritas.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Descendientes:</strong> Hijos menores de edad o mayores incapacitados.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-eywa-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Ascendientes:</strong> Padres dependientes económicamente.
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="contacto.html" class="btn-primary">Consultar sobre reagrupación</a>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&auto=format&fit=crop&q=80" alt="Reagrupación familiar" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
+                </div>
+            </div>
+
+            <!-- Asilo -->
+            <div id="asilo" class="grid lg:grid-cols-2 gap-12 items-center reveal">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&auto=format&fit=crop&q=80" alt="Asilo y protección internacional" class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
+                </div>
+                <div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-earth-500 to-earth-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold text-eywa-900 mb-4">Asilo y Protección Internacional</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Defensa integral de solicitantes de asilo y protección internacional en todas las instancias administrativas y judiciales.</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Solicitud inicial:</strong> Preparación y presentación de la solicitud de asilo.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Recursos:</strong> Impugnación de denegaciones de asilo.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-eywa-900">Protección subsidiaria:</strong> Cuando no procede el asilo pero existe riesgo real.
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="contacto.html" class="btn-primary bg-gradient-to-r from-earth-600 to-earth-500">Consultar sobre asilo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-eywa-800 text-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold mb-6">¿No encuentras lo que buscas?</h2>
+            <p class="text-eywa-200 text-lg mb-8">Cada caso es único. Contáctanos y estudiaremos tu situación personalmente.</p>
+            <a href="contacto.html" class="btn-primary bg-white text-eywa-800 hover:bg-eywa-100">Contactar ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer (igual que index.html) -->
+    <footer class="bg-eywa-900 text-eywa-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="testimonios.html" class="footer-link">Testimonios</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="servicios.html#residencia" class="footer-link">Permisos de Residencia</a></li>
+                        <li><a href="servicios.html#nacionalidad" class="footer-link">Nacionalidad</a></li>
+                        <li><a href="servicios.html#reagrupacion" class="footer-link">Reagrupación</a></li>
+                        <li><a href="servicios.html#asilo" class="footer-link">Asilo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-eywa-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="footer-link">Aviso Legal</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                    <a href="#" class="footer-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

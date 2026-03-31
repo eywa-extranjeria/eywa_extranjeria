@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de EYWA Extranjería. Noticias, novedades legislativas y consejos sobre permisos de residencia, nacionalidad y derecho de extranjería en España.">
+    <title>Blog | EYWA Extranjería - Noticias y Actualidad</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['DM Serif Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        eywa: {
+                            50: '#f6f7f6', 100: '#e3e8e4', 200: '#c7d2c9',
+                            300: '#a3b5a6', 400: '#7a917f', 500: '#5c7561',
+                            600: '#485e4c', 700: '#3c4d3f', 800: '#313f34', 900: '#2a352c',
+                        },
+                        earth: {
+                            50: '#faf8f6', 100: '#f0ebe5', 200: '#ddd4c8',
+                            300: '#c4b6a6', 400: '#a89480', 500: '#8b7862',
+                            600: '#6b5a48', 700: '#574a3c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="glass-nav border-b border-eywa-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                            <span class="text-[10px] text-eywa-600 tracking-[0.2em] uppercase font-medium">Extranjería</span>
+                        </div>
+                    </a>
+                    
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="servicios.html" class="nav-link">Servicios</a>
+                        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                        <a href="testimonios.html" class="nav-link">Testimonios</a>
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                        <a href="contacto.html" class="btn-primary text-sm py-3 px-6">Consulta Gratis</a>
+                    </div>
+
+                    <button class="lg:hidden touch-target flex items-center justify-center text-eywa-800" id="menu-btn" aria-label="Menú">
+                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center p-6 border-b border-eywa-100">
+                    <span class="font-serif text-xl font-bold text-eywa-900">EYWA</span>
+                    <button class="touch-target" id="close-menu">
+                        <i class="fas fa-times text-xl text-eywa-800"></i>
+                    </button>
+                </div>
+                <div class="flex-1 flex flex-col justify-center px-6 space-y-6">
+                    <a href="index.html" class="text-2xl font-serif text-eywa-900">Inicio</a>
+                    <a href="servicios.html" class="text-2xl font-serif text-eywa-900">Servicios</a>
+                    <a href="sobre-nosotros.html" class="text-2xl font-serif text-eywa-900">Sobre Nosotros</a>
+                    <a href="testimonios.html" class="text-2xl font-serif text-eywa-900">Testimonios</a>
+                    <a href="blog.html" class="text-2xl font-serif text-eywa-900">Blog</a>
+                    <a href="contacto.html" class="btn-primary text-center mt-4">Consulta Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 bg-eywa-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center reveal">
+            <span class="text-earth-600 font-semibold tracking-wider uppercase text-sm">Blog</span>
+            <h1 class="font-serif text-4xl lg:text-6xl font-bold text-eywa-900 mt-4">Noticias y <span class="font-serif-italic text-eywa-600">actualidad</span></h1>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">Mantente informado sobre novedades legislativas, consejos prácticos y casos de interés en materia de extranjería.</p>
+        </div>
+    </section>
+
+    <!-- Artículos Destacados -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <!-- Artículo Destacado -->
+            <div class="mb-16 reveal">
+                <div class="grid lg:grid-cols-2 gap-8 bg-eywa-50 rounded-3xl overflow-hidden border border-eywa-100">
+                    <div class="relative h-64 lg:h-auto">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80" alt="Novedades extranjería 2024" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-eywa-700 text-white px-4 py-2 rounded-full text-sm font-medium">
+                            Destacado
+                        </div>
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                            <span><i class="far fa-calendar mr-2"></i>15 Marzo 2026</span>
+                            <span><i class="far fa-clock mr-2"></i>5 min lectura</span>
+                        </div>
+                        <h2 class="font-serif text-2xl lg:text-3xl font-bold text-eywa-900 mb-4">Nuevas medidas de extranjería 2026: ¿Qué cambia para los migrantes?</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">El Gobierno ha aprobado una serie de reformas significativas en la Ley de Extranjería que facilitan la regularización de trabajadores, amplían los supuestos de arraigo y agilizan los procedimientos de nacionalidad. Te explicamos todo lo que necesitas saber.</p>
+                        <a href="#" class="inline-flex items-center text-eywa-700 font-semibold hover:text-eywa-900 transition-colors">
+                            Leer artículo completo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Artículos -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Artículo 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-1">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&auto=format&fit=crop&q=80" alt="Arraigo social" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Arraigo
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>10 Marzo 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Guía completa del arraigo social 2026</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo social con éxito.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-2">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=600&auto=format&fit=crop&q=80" alt="Nacionalidad" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Nacionalidad
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>5 Marzo 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>6 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Examen CCSE: consejos para aprobar a la primera</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Estrategias de estudio, temario actualizado y recursos gratuitos para preparar el examen de constitucionalidad.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-3">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&auto=format&fit=crop&q=80" alt="Reagrupación" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Reagrupación
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>28 Febrero 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Reagrupación familiar: errores comunes y cómo evitarlos</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Los errores más frecuentes que provocan denegaciones en procesos de reagrupación y cómo evitarlos.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-1">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&auto=format&fit=crop&q=80" alt="Permiso trabajo" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Trabajo
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>20 Febrero 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Cuenta ajena vs cuenta propia: ¿qué permiso me conviene?</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Comparativa detallada de requisitos, ventajas y desventajas de cada tipo de autorización de residencia y trabajo.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 5 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-2">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80" alt="Documentación" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Trámites
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>15 Febrero 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>3 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Cita previa extranjería: cómo conseguirla sin esperas</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Trucos y estrategias para obtener cita previa en oficinas de extranjería saturadas. Apps, horarios y alternativas.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 6 -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-eywa-100 hover-lift reveal stagger-3">
+                    <div class="h-48 bg-eywa-200 relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=80" alt="Empadronamiento" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-earth-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                            Empadronamiento
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>8 Febrero 2026</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-eywa-900 mb-3">Empadronamiento: guía actualizada 2026</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Requisitos, documentación y procedimiento para empadronarse en España. Resolución de casos problemáticos.</p>
+                        <a href="#" class="text-eywa-600 font-medium text-sm hover:text-eywa-800 transition-colors">Leer más →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Paginación -->
+            <div class="flex justify-center mt-12 space-x-2 reveal">
+                <button class="w-10 h-10 rounded-full bg-eywa-700 text-white flex items-center justify-center">1</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-eywa-200 text-gray-600 hover:bg-eywa-50 flex items-center justify-center transition-colors">2</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-eywa-200 text-gray-600 hover:bg-eywa-50 flex items-center justify-center transition-colors">3</button>
+                <button class="w-10 h-10 rounded-full bg-white border border-eywa-200 text-gray-600 hover:bg-eywa-50 flex items-center justify-center transition-colors"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-24 bg-eywa-800 text-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
+            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-envelope-open-text text-2xl text-earth-300"></i>
+            </div>
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold mb-4">Suscríbete a nuestra newsletter</h2>
+            <p class="text-eywa-200 text-lg mb-8">Recibe las últimas novedades legislativas y consejos prácticos directamente en tu email.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                <input type="email" placeholder="Tu email" required class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-eywa-300 focus:outline-none focus:border-earth-400">
+                <button type="submit" class="btn-primary bg-earth-500 hover:bg-earth-600 px-8 py-4 rounded-full font-semibold">
+                    Suscribirme
+                </button>
+            </form>
+            <p class="text-eywa-300 text-sm mt-4">Respetamos tu privacidad. Puedes darte de baja en cualquier momento.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-eywa-900 text-eywa-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="testimonios.html" class="footer-link">Testimonios</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categorías</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="footer-link">Residencia</a></li>
+                        <li><a href="#" class="footer-link">Nacionalidad</a></li>
+                        <li><a href="#" class="footer-link">Reagrupación</a></li>
+                        <li><a href="#" class="footer-link">Asilo</a></li>
+                        <li><a href="#" class="footer-link">Trámites</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-eywa-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="footer-link">Aviso Legal</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                    <a href="#" class="footer-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

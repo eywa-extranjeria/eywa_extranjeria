@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Testimonios de clientes de EYWA Extranjería. Casos reales de residencia, nacionalidad y reagrupación familiar resueltos con éxito.">
+    <title>Testimonios | EYWA Extranjería - Experiencias de Clientes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['DM Serif Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        eywa: {
+                            50: '#f6f7f6', 100: '#e3e8e4', 200: '#c7d2c9',
+                            300: '#a3b5a6', 400: '#7a917f', 500: '#5c7561',
+                            600: '#485e4c', 700: '#3c4d3f', 800: '#313f34', 900: '#2a352c',
+                        },
+                        earth: {
+                            50: '#faf8f6', 100: '#f0ebe5', 200: '#ddd4c8',
+                            300: '#c4b6a6', 400: '#a89480', 500: '#8b7862',
+                            600: '#6b5a48', 700: '#574a3c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="glass-nav border-b border-eywa-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                            <span class="text-[10px] text-eywa-600 tracking-[0.2em] uppercase font-medium">Extranjería</span>
+                        </div>
+                    </a>
+                    
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="servicios.html" class="nav-link">Servicios</a>
+                        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                        <a href="testimonios.html" class="nav-link active">Testimonios</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="contacto.html" class="btn-primary text-sm py-3 px-6">Consulta Gratis</a>
+                    </div>
+
+                    <button class="lg:hidden touch-target flex items-center justify-center text-eywa-800" id="menu-btn" aria-label="Menú">
+                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center p-6 border-b border-eywa-100">
+                    <span class="font-serif text-xl font-bold text-eywa-900">EYWA</span>
+                    <button class="touch-target" id="close-menu">
+                        <i class="fas fa-times text-xl text-eywa-800"></i>
+                    </button>
+                </div>
+                <div class="flex-1 flex flex-col justify-center px-6 space-y-6">
+                    <a href="index.html" class="text-2xl font-serif text-eywa-900">Inicio</a>
+                    <a href="servicios.html" class="text-2xl font-serif text-eywa-900">Servicios</a>
+                    <a href="sobre-nosotros.html" class="text-2xl font-serif text-eywa-900">Sobre Nosotros</a>
+                    <a href="testimonios.html" class="text-2xl font-serif text-eywa-900">Testimonios</a>
+                    <a href="blog.html" class="text-2xl font-serif text-eywa-900">Blog</a>
+                    <a href="contacto.html" class="btn-primary text-center mt-4">Consulta Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 bg-eywa-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center reveal">
+            <span class="text-earth-600 font-semibold tracking-wider uppercase text-sm">Testimonios</span>
+            <h1 class="font-serif text-4xl lg:text-6xl font-bold text-eywa-900 mt-4">Lo que dicen nuestros <span class="font-serif-italic text-eywa-600">clientes</span></h1>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">Historias reales de personas que confiaron en nosotros para regularizar su situación en España.</p>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="py-16 bg-white border-b border-eywa-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
+                <div>
+                    <p class="text-4xl lg:text-5xl font-bold text-eywa-700 font-serif mb-2 counter" data-target="500">0+</p>
+                    <p class="text-gray-600">Casos resueltos</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-bold text-eywa-700 font-serif mb-2 counter" data-target="98">0%</p>
+                    <p class="text-gray-600">Satisfacción</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-bold text-eywa-700 font-serif mb-2 counter" data-target="10">0+</p>
+                    <p class="text-gray-600">Años de experiencia</p>
+                </div>
+                <div>
+                    <p class="text-4xl lg:text-5xl font-bold text-eywa-700 font-serif mb-2 counter" data-target="50">0+</p>
+                    <p class="text-gray-600">Nacionalidades conseguidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Grid -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-1">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Selma resolvió mi caso de reagrupación cuando otros abogados dijeron que era imposible. Su profesionalidad y dedicación marcaron la diferencia total. No puedo estar más agradecida."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">M</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">María G.</p>
+                            <p class="text-sm text-gray-500">Reagrupación familiar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-2">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Gracias a EYWA obtuve mi nacionalidad tras años de incertidumbre. El proceso fue claro, transparente y finalmente exitoso. Eternamente agradecido por su paciencia."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">A</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">Ahmed K.</p>
+                            <p class="text-sm text-gray-500">Nacionalidad española</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-3">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Me ayudaron con un recurso de expulsión extremadamente complejo. Su conocimiento del derecho es profundo, actualizado y efectivo. Recomiendo EYWA sin duda."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">J</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">Juan P.</p>
+                            <p class="text-sm text-gray-500">Recurso de expulsión</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-1">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Después de 5 años intentando regularizar mi situación, en EYWA encontré la solución en 6 meses. Su conocimiento del arraigo social es excepcional."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">C</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">Carlos M.</p>
+                            <p class="text-sm text-gray-500">Arraigo social</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-2">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"Mi solicitud de asilo fue denegada dos veces antes de llegar a EYWA. Selma encontró el error en mi expediente y finalmente obtuve la protección internacional."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">Y</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">Yusuf A.</p>
+                            <p class="text-sm text-gray-500">Asilo y protección</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6 -->
+                <div class="bg-eywa-50 rounded-2xl p-8 border border-eywa-100 hover-lift reveal stagger-3">
+                    <div class="flex text-earth-500 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic leading-relaxed">"La renovación de mi tarjeta comunitaria era urgente y EYWA lo gestionó en tiempo récord. Atención personalizada y resultados garantizados."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-eywa-300 rounded-full flex items-center justify-center text-eywa-800 font-bold text-lg">L</div>
+                        <div>
+                            <p class="font-semibold text-eywa-900">Laura B.</p>
+                            <p class="text-sm text-gray-500">Tarjeta comunitaria</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Caso de Éxito Destacado -->
+    <section class="py-24 bg-eywa-800 text-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center reveal">
+                <div>
+                    <span class="text-earth-300 font-semibold tracking-wider uppercase text-sm">Caso de Éxito</span>
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold mt-4 mb-6">"De la incertidumbre a la seguridad en 8 meses"</h2>
+                    <p class="text-eywa-200 text-lg leading-relaxed mb-6">El caso de Ana representa a muchos clientes que llegan a nosotros desesperados tras años de procedimientos fallidos. Con una estrategia legal adecuada y paciencia, conseguimos la residencia permanente para toda su familia.</p>
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-home text-2xl text-earth-300"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Residencia permanente</p>
+                            <p class="text-eywa-300 text-sm">Familia completa regularizada</p>
+                        </div>
+                    </div>
+                    <a href="contacto.html" class="btn-primary bg-white text-eywa-800 hover:bg-eywa-100">Consulta tu caso</a>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-earth-500 rounded-3xl transform rotate-3 opacity-20"></div>
+                    <div class="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                        <i class="fas fa-quote-left text-4xl text-earth-400 mb-4"></i>
+                        <p class="text-xl italic leading-relaxed mb-6">"Pensaba que nunca podría regularizar mi situación. EYWA no solo me dio esperanza, sino resultados concretos. Mi familia y yo estamos eternamente agradecidos."</p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-earth-500 rounded-full flex items-center justify-center font-bold">A</div>
+                            <div>
+                                <p class="font-semibold">Ana R.</p>
+                                <p class="text-eywa-300 text-sm">Residencia permanente, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold text-eywa-900 mb-6">¿Quieres ser nuestro próximo caso de éxito?</h2>
+            <p class="text-lg text-gray-600 mb-8">Tu historia puede tener un final feliz. Contáctanos y comienza tu proceso hoy.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contacto.html" class="btn-primary text-lg">Pedir cita gratuita</a>
+                <a href="https://wa.me/34694236452" target="_blank" class="btn-whatsapp text-lg">WhatsApp directo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-eywa-900 text-eywa-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="testimonios.html" class="footer-link">Testimonios</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="servicios.html#residencia" class="footer-link">Permisos de Residencia</a></li>
+                        <li><a href="servicios.html#nacionalidad" class="footer-link">Nacionalidad</a></li>
+                        <li><a href="servicios.html#reagrupacion" class="footer-link">Reagrupación</a></li>
+                        <li><a href="servicios.html#asilo" class="footer-link">Asilo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-eywa-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="footer-link">Aviso Legal</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                    <a href="#" class="footer-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

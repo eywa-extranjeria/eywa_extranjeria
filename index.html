@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EYWA Extranjería - Despacho especializado en derecho de extranjería en Valencia. Permisos de residencia, nacionalidad española, reagrupación familiar.">
+    <title>EYWA Extranjería - Expertos en Derecho de Migración | Valencia</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['DM Serif Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        eywa: {
+                            50: '#f6f7f6', 100: '#e3e8e4', 200: '#c7d2c9',
+                            300: '#a3b5a6', 400: '#7a917f', 500: '#5c7561',
+                            600: '#485e4c', 700: '#3c4d3f', 800: '#313f34', 900: '#2a352c',
+                        },
+                        earth: {
+                            50: '#faf8f6', 100: '#f0ebe5', 200: '#ddd4c8',
+                            300: '#c4b6a6', 400: '#a89480', 500: '#8b7862',
+                            600: '#6b5a48', 700: '#574a3c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- ============================================
+         NAVEGACIÓN
+         ============================================ -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="glass-nav border-b border-eywa-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA Logo" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                            <span class="text-[10px] text-eywa-600 tracking-[0.2em] uppercase font-medium">Extranjería</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link active">Inicio</a>
+                        <a href="servicios.html" class="nav-link">Servicios</a>
+                        <a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a>
+                        <a href="testimonios.html" class="nav-link">Testimonios</a>
+                        <a href="contacto.html" class="btn-primary text-sm py-3 px-6">Consulta Gratis</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden touch-target flex items-center justify-center text-eywa-800" id="menu-btn" aria-label="Menú">
+                        <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex justify-between items-center p-6 border-b border-eywa-100">
+                    <span class="font-serif text-xl font-bold text-eywa-900">EYWA</span>
+                    <button class="touch-target" id="close-menu">
+                        <i class="fas fa-times text-xl text-eywa-800"></i>
+                    </button>
+                </div>
+                <div class="flex-1 flex flex-col justify-center px-6 space-y-6">
+                    <a href="index.html" class="text-2xl font-serif text-eywa-900">Inicio</a>
+                    <a href="servicios.html" class="text-2xl font-serif text-eywa-900">Servicios</a>
+                    <a href="sobre-nosotros.html" class="text-2xl font-serif text-eywa-900">Sobre Nosotros</a>
+                    <a href="testimonios.html" class="text-2xl font-serif text-eywa-900">Testimonios</a>
+                    <a href="contacto.html" class="btn-primary text-center mt-4">Consulta Gratuita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-eywa-50">
+        <div class="absolute inset-0 pattern-grid opacity-30"></div>
+        
+        <div class="absolute top-20 right-0 w-96 h-96 bg-eywa-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-earth-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Content -->
+                <div class="space-y-8 text-center lg:text-left order-2 lg:order-1">
+                    <div class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-eywa-200 shadow-sm reveal">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-eywa-700">Disponibles para toda España</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-eywa-900 leading-[1.1] reveal stagger-1">
+                        Regularizamos tu <span class="font-serif-italic text-eywa-600">situación</span> en España
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 reveal stagger-2">
+                        Especialistas en derecho de extranjería. Desde Valencia, actuamos en todo el territorio español para defender tus derechos.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal stagger-3">
+                        <a href="contacto.html" class="btn-primary text-base touch-target">
+                            Solicitar Consulta <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="servicios.html" class="btn-secondary text-base touch-target">
+                            Ver Servicios
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 text-gray-500 text-sm reveal stagger-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-eywa-500"></i>
+                            <span>Consulta inicial gratuita</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-eywa-500"></i>
+                            <span>Atención 100% personalizada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end reveal-right">
+                    <div class="relative w-full max-w-md lg:max-w-lg">
+                        <div class="absolute inset-0 bg-gradient-to-br from-eywa-400 to-earth-400 rounded-3xl transform rotate-3 opacity-20"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&auto=format&fit=crop&q=80" alt="Abogada especialista" class="w-full h-[500px] lg:h-[600px] object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-eywa-100">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-eywa-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-award text-eywa-700 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-eywa-900 text-lg">+10 años</p>
+                                    <p class="text-sm text-gray-500">de experiencia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-6 -right-6 bg-earth-600 text-white p-5 rounded-2xl shadow-xl">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold font-serif">98%</p>
+                                <p class="text-sm opacity-90">Tasa de éxito</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICIOS DESTACADOS (Preview)
+         ============================================ -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-earth-600 font-semibold tracking-wider uppercase text-sm">Nuestros Servicios</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold text-eywa-900 mt-4 mb-6">Soluciones integrales para <span class="font-serif-italic text-eywa-600">migrantes</span></h2>
+                <p class="text-lg text-gray-600">Asesoramiento especializado en todas las materias de derecho de extranjería.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="card reveal stagger-1">
+                    <div class="w-14 h-14 bg-gradient-to-br from-eywa-500 to-eywa-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-eywa-900 mb-3">Permisos de Residencia</h3>
+                    <p class="text-gray-600 mb-4">Gestión completa de autorizaciones: cuenta ajena, cuenta propia, arraigo y renovaciones.</p>
+                    <a href="servicios.html#residencia" class="text-eywa-600 font-medium hover:text-eywa-800 transition-colors">Saber más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="card reveal stagger-2">
+                    <div class="w-14 h-14 bg-gradient-to-br from-earth-500 to-earth-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-eywa-900 mb-3">Nacionalidad Española</h3>
+                    <p class="text-gray-600 mb-4">Tramitación por residencia, opción, carta de naturaleza y recuperación.</p>
+                    <a href="servicios.html#nacionalidad" class="text-earth-600 font-medium hover:text-earth-800 transition-colors">Saber más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="card reveal stagger-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-eywa-500 to-eywa-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-eywa-900 mb-3">Reagrupación Familiar</h3>
+                    <p class="text-gray-600 mb-4">Reunificación de familias: cónyuges, ascendientes y descendientes.</p>
+                    <a href="servicios.html#reagrupacion" class="text-eywa-600 font-medium hover:text-eywa-800 transition-colors">Saber más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="servicios.html" class="btn-secondary">Ver todos los servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         POR QUÉ EYWA
+         ============================================ -->
+    <section class="py-24 lg:py-32 bg-eywa-800 text-white relative overflow-hidden stats-section">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-eywa-300 font-semibold tracking-wider uppercase text-sm">¿Por qué elegirnos?</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-bold mt-4 mb-6">La diferencia que marca el <span class="font-serif-italic text-earth-300">resultado</span></h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all reveal stagger-1">
+                    <div class="w-14 h-14 bg-earth-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Especialización</h3>
+                    <p class="text-eywa-200 text-sm leading-relaxed">Solo extranjería. Nuestra pasión y especialidad exclusiva.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all reveal stagger-2">
+                    <div class="w-14 h-14 bg-earth-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Trato Personal</h3>
+                    <p class="text-eywa-200 text-sm leading-relaxed">Cada cliente es único. Estrategia a medida para tu caso.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all reveal stagger-3">
+                    <div class="w-14 h-14 bg-earth-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Agilidad</h3>
+                    <p class="text-eywa-200 text-sm leading-relaxed">Entendemos la urgencia. Eficiencia sin sacrificar calidad.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all reveal stagger-4">
+                    <div class="w-14 h-14 bg-earth-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Transparencia</h3>
+                    <p class="text-eywa-200 text-sm leading-relaxed">Honorarios claros desde el principio. Sin falsas promesas.</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 grid grid-cols-3 gap-8 text-center reveal">
+                <div class="border-t border-white/20 pt-8">
+                    <p class="text-4xl lg:text-5xl font-bold text-earth-300 font-serif mb-2 counter" data-target="500">0+</p>
+                    <p class="text-eywa-300">Casos resueltos</p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <p class="text-4xl lg:text-5xl font-bold text-earth-300 font-serif mb-2 counter" data-target="10">0+</p>
+                    <p class="text-eywa-300">Años de experiencia</p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <p class="text-4xl lg:text-5xl font-bold text-earth-300 font-serif mb-2">98%</p>
+                    <p class="text-eywa-300">Clientes satisfechos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA FINAL
+         ============================================ -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center reveal">
+            <h2 class="font-serif text-4xl lg:text-5xl font-bold text-eywa-900 mb-6">¿Listo para regularizar tu situación?</h2>
+            <p class="text-lg text-gray-600 mb-8">La primera consulta es gratuita y sin compromiso. Cuéntanos tu caso y te ayudaremos a encontrar la mejor solución.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contacto.html" class="btn-primary text-lg">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Pedir Cita
+                </a>
+                <a href="https://wa.me/34694236452" target="_blank" class="btn-whatsapp text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-eywa-900 text-eywa-200 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a></li>
+                        <li><a href="testimonios.html" class="footer-link">Testimonios</a></li>
+                        <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="servicios.html#residencia" class="footer-link">Permisos de Residencia</a></li>
+                        <li><a href="servicios.html#nacionalidad" class="footer-link">Nacionalidad</a></li>
+                        <li><a href="servicios.html#reagrupacion" class="footer-link">Reagrupación</a></li>
+                        <li><a href="servicios.html#asilo" class="footer-link">Asilo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                        <li>Lun-Vie: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-eywa-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="footer-link">Aviso Legal</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                    <a href="#" class="footer-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
