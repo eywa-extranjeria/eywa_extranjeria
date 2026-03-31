@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#3c4d3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Estrategias de estudio, temario actualizado y recursos gratuitos para preparar el examen de constitucionalidad.">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Examen CCSE: consejos para aprobar a la primera | Blog EYWA Extranjería</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eywa': {
+                            50: '#f4f7f4',
+                            100: '#e3ebe3',
+                            200: '#c5d8c5',
+                            300: '#9bb99b',
+                            400: '#729672',
+                            500: '#527852',
+                            600: '#3c4d3f',
+                            700: '#303f33',
+                            800: '#28322a',
+                            900: '#222b24',
+                        },
+                        'earth': {
+                            300: '#d4a574',
+                            500: '#b8834f',
+                            600: '#9c6b3f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-serif { font-family: 'DM Serif Display', serif; }
+        .font-serif-italic { font-family: 'DM Serif Display', serif; font-style: italic; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .article-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1rem; line-height: 1.8; }
+        .article-content ul, .article-content ol { margin-bottom: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" aria-label="EYWA Extranjería - Inicio">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                        <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain" loading="eager">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                        <span class="text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase">Extranjería</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Inicio</a>
+                    <a href="../servicios.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Servicios</a>
+                    <a href="blog.html" class="text-eywa-700 font-semibold">Blog</a>
+                    <a href="../contacto.html" class="px-6 py-2.5 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors shadow-lg">Consulta</a>
+                </div>
+
+                <button class="lg:hidden flex items-center justify-center text-eywa-800 -mr-2" id="menu-btn" aria-label="Abrir menú">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="flex justify-between items-center p-4 sm:p-6 border-b border-eywa-100">
+            <span class="font-serif text-xl font-bold text-eywa-900">Menú</span>
+            <button class="flex items-center justify-center text-eywa-800" id="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times text-xl sm:text-2xl"></i>
+            </button>
+        </div>
+        <nav class="p-4 sm:p-6">
+            <a href="../index.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Inicio</a>
+            <a href="../servicios.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Servicios</a>
+            <a href="blog.html" class="block py-3 text-lg text-eywa-700 font-semibold border-b border-gray-100 border-l-4 border-eywa-600 pl-4">Blog</a>
+            <a href="../contacto.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700">Contacto</a>
+        </nav>
+    </div>
+
+    <!-- HEADER DEL ARTÍCULO -->
+    <header class="pt-24 sm:pt-28 lg:pt-32 pb-8 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+            <div class="mb-6">
+                <a href="blog.html" class="inline-flex items-center text-eywa-600 hover:text-eywa-800 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al blog
+                </a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+                <span class="bg-eywa-100 text-eywa-800 px-3 py-1 rounded-full text-sm font-medium">Nacionalidad</span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-calendar mr-2"></i>5 Marzo 2026
+                </span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-clock mr-2"></i>6 min lectura
+                </span>
+            </div>
+
+            <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-eywa-900 leading-tight mb-6">
+                Examen CCSE: consejos para aprobar a la primera
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                Estrategias de estudio, temario actualizado y recursos gratuitos para preparar el examen de constitucionalidad.
+            </p>
+        </div>
+    </header>
+
+    <!-- IMAGEN DESTACADA -->
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-8">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?w=1200&auto=format&fit=crop&q=80" alt="Examen CCSE: consejos para aprobar a la primera" class="w-full h-64 sm:h-80 lg:h-96 object-cover">
+        </div>
+    </div>
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <article class="bg-white pb-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
+            <div class="article-content text-gray-700">
+                
+        <p class="text-lg text-gray-600 mb-6">El Conocimiento Constitucional y Sociocultural de España (CCSE) es uno de los requisitos obligatorios para obtener la nacionalidad española. Aunque no es un examen excesivamente difícil, requiere preparación específica. Te contamos cómo afrontarlo con éxito.</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">¿Qué es el CCSE?</h2>
+        <p class="text-gray-600 mb-4">El CCSE es un test de 25 preguntas tipo test que evalúa conocimientos sobre la Constitución Española, la organización territorial del Estado, la Unión Europea, la geografía, historia, cultura y sociedad españolas. Para aprobar necesitas acertar al menos 15 preguntas (60%).</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Estructura del examen</h2>
+        <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm text-left text-gray-600">
+                <thead class="text-xs text-gray-700 uppercase bg-eywa-50">
+                    <tr>
+                        <th class="px-4 py-3 rounded-tl-lg">Bloque temático</th>
+                        <th class="px-4 py-3">Nº preguntas aprox.</th>
+                        <th class="px-4 py-3 rounded-tr-lg">Contenido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b">
+                        <td class="px-4 py-3 font-medium">Gobierno y legislación</td>
+                        <td class="px-4 py-3">7-8</td>
+                        <td class="px-4 py-3">Constitución, poderes del Estado, leyes</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                        <td class="px-4 py-3 font-medium">Derechos y deberes</td>
+                        <td class="px-4 py-3">4-5</td>
+                        <td class="px-4 py-3">Derechos fundamentales, ciudadanía</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                        <td class="px-4 py-3 font-medium">Organización territorial</td>
+                        <td class="px-4 py-3">4-5</td>
+                        <td class="px-4 py-3">Comunidades autónomas, provincias, municipios</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                        <td class="px-4 py-3 font-medium">Geografía e historia</td>
+                        <td class="px-4 py-3">3-4</td>
+                        <td class="px-4 py-3">Comunidades, capitales, hechos históricos</td>
+                    </tr>
+                    <tr class="bg-white">
+                        <td class="px-4 py-3 font-medium">Cultura y sociedad</td>
+                        <td class="px-4 py-3">3-4</td>
+                        <td class="px-4 py-3">Fiestas, tradiciones, símbolos, UE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Estrategias de estudio efectivas</h2>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">1. Utiliza el manual oficial</h3>
+        <p class="text-gray-600 mb-4">El Instituto Cervantes publica el "Manual CCSE" completamente gratuito en su web. Es el material más fiable porque el examen se basa directamente en él. Descárgalo y estudia capítulo por capítulo.</p>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">2. Practica con exámenes antiguos</h3>
+        <p class="text-gray-600 mb-4">En la web del Cervantes encontrás exámenes de convocatorias anteriores. Haz al menos 3-4 simulacros completos para familiarizarte con el formato y detectar tus puntos débiles.</p>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">3. Crea tarjetas de memoria</h3>
+        <p class="text-gray-600 mb-4">Para datos puntuales como años históricos, nombres de presidentes, capitales de comunidades o número de escaños, las tarjetas (flashcards) son muy efectivas. Apps como Anki o Quizlet pueden ayudarte.</p>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">4. Estudia con regularidad</h3>
+        <p class="text-gray-600 mb-4">Es mejor estudiar 30 minutos diarios durante un mes que 8 horas seguidas el día anterior. La constancia es clave para retener la información.</p>
+
+        <div class="bg-eywa-50 border-l-4 border-eywa-600 p-4 my-6 rounded-r-lg">
+            <p class="text-eywa-800"><i class="fas fa-calendar-check mr-2"></i><strong>Plan recomendado:</strong> Dedica 3-4 semanas de estudio, distribuyendo los bloques temáticos y reservando los últimos 5 días para simulacros completos.</p>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Preguntas tipo que suelen caer</h2>
+        <ul class="space-y-2 text-gray-600 mb-6">
+            <li>• ¿Cuántos artículos tiene la Constitución? (169)</li>
+            <li>• ¿Quién es el jefe del Estado? (El Rey)</li>
+            <li>• ¿Cuántas comunidades autónomas hay? (17 + 2 ciudades autónomas)</li>
+            <li>• ¿Cuál es la forma de gobierno? (Parlamentaria monárquica)</li>
+            <li>• ¿Qué día es la Fiesta Nacional? (12 de octubre)</li>
+            <li>• ¿Cuántos diputados tiene el Congreso? (350)</li>
+            <li>• ¿Cuántos años dura el mandato del Presidente del Gobierno? (4 años, máximo 2 mandatos consecutivos)</li>
+        </ul>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">El día del examen</h2>
+        <div class="grid md:grid-cols-2 gap-4 my-6">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h4 class="font-semibold text-green-800 mb-2"><i class="fas fa-check mr-2"></i>Haz esto</h4>
+                <ul class="text-sm text-green-700 space-y-1">
+                    <li>• Llega con 30 minutos de antelación</li>
+                    <li>• Lee cada pregunta dos veces</li>
+                    <li>• Elimina primero las opciones claramente incorrectas</li>
+                    <li>• Revisa todas las respuestas antes de entregar</li>
+                    <li>• Mantén la calma si hay preguntas difíciles</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                <h4 class="font-semibold text-red-800 mb-2"><i class="fas fa-times mr-2"></i>Evita esto</h4>
+                <ul class="text-sm text-red-700 space-y-1">
+                    <li>• No contestes a la ligera por ir rápido</li>
+                    <li>• No te bloquees en una sola pregunta</li>
+                    <li>• No confíes solo en la intuición</li>
+                    <li>• No olvides tu DNI o pasaporte</li>
+                    <li>• No te rindas si fallas algunas</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Recursos gratuitos recomendados</h2>
+        <ul class="space-y-3 text-gray-600 mb-6">
+            <li class="flex items-start">
+                <i class="fas fa-external-link-alt text-eywa-600 mt-1 mr-3"></i>
+                <div>
+                    <strong>Instituto Cervantes:</strong> Manual oficial, exámenes modelo y fechas de convocatoria.<br>
+                    <span class="text-sm text-gray-500">cervantes.es/es/certificados/ccse</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-mobile-alt text-eywa-600 mt-1 mr-3"></i>
+                <div>
+                    <strong>App Preparar CCSE:</strong> Tests interactivos y explicaciones de respuestas.
+                </div>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-video text-eywa-600 mt-1 mr-3"></i>
+                <div>
+                    <strong>YouTube:</strong> Canales como "Español para extranjeros" o "Aula de español" tienen playlists dedicadas.
+                </div>
+            </li>
+        </ul>
+
+        <p class="text-gray-600">Recuerda: el CCSE tiene validez de 4 años y puedes presentarte tantas veces como necesites (con 2 meses de separación entre convocatorias). Si no lo apruebas a la primera, analiza qué bloques te fallaron y refuerza esos temas.</p>
+
+        <div class="bg-earth-50 border border-earth-200 rounded-lg p-4 mt-6">
+            <p class="text-earth-800 text-sm"><i class="fas fa-phone mr-2"></i>¿Necesitas orientación sobre el proceso completo de nacionalidad? En EYWA Extranjería te guiamos desde la preparación del CCSE hasta la presentación de la solicitud de nacionalidad.</p>
+        </div>
+        
+            </div>
+
+            <!-- Compartir -->
+            <div class="border-t border-gray-200 pt-8 mt-12">
+                <h3 class="font-semibold text-gray-900 mb-4">Compartir artículo</h3>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/?text=Examen%20CCSE:%20consejos%20para%20aprobar%20a%20la%20primera%20-%20EYWA%20Extranjería" target="_blank" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://eywaextranjeria.com/examen-ccse-consejos.html" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Examen%20CCSE:%20consejos%20para%20aprobar%20a%20la%20primera%20-%20EYWA%20Extranjería&url=https://eywaextranjeria.com/examen-ccse-consejos.html" target="_blank" class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles')" class="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-eywa-50 rounded-2xl p-6 sm:p-8 mt-12 text-center">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 mb-3">¿Necesitas ayuda con tu trámite?</h3>
+                <p class="text-gray-600 mb-6">Nuestro equipo de especialistas está listo para asesorarte de manera personalizada.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://wa.me/34694236452" class="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </a>
+                    <a href="../contacto.html" class="inline-flex items-center justify-center px-6 py-3 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors">
+                        <i class="fas fa-calendar mr-2"></i>
+                        Pedir cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-eywa-900 text-eywa-200 py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="../servicios.html" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="../contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-eywa-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 lg:hidden flex justify-around items-center z-40">
+        <a href="tel:+34694236452" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-phone text-lg mb-1"></i>
+            Llamar
+        </a>
+        <a href="https://wa.me/34694236452" class="flex flex-col items-center text-green-600 text-xs">
+            <i class="fab fa-whatsapp text-lg mb-1"></i>
+            WhatsApp
+        </a>
+        <a href="../contacto.html" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-calendar text-lg mb-1"></i>
+            Cita
+        </a>
+    </div>
+    <div class="h-16 lg:hidden"></div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>

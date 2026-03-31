@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#3c4d3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="El Gobierno ha aprobado una serie de reformas significativas en la Ley de Extranjería que facilitan la regularización de trabajadores, amplían los supuestos de arraigo y agilizan los procedimientos de nacionalidad.">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Nuevas medidas de extranjería 2026: ¿Qué cambia para los migrantes? | Blog EYWA Extranjería</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eywa': {
+                            50: '#f4f7f4',
+                            100: '#e3ebe3',
+                            200: '#c5d8c5',
+                            300: '#9bb99b',
+                            400: '#729672',
+                            500: '#527852',
+                            600: '#3c4d3f',
+                            700: '#303f33',
+                            800: '#28322a',
+                            900: '#222b24',
+                        },
+                        'earth': {
+                            300: '#d4a574',
+                            500: '#b8834f',
+                            600: '#9c6b3f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-serif { font-family: 'DM Serif Display', serif; }
+        .font-serif-italic { font-family: 'DM Serif Display', serif; font-style: italic; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .article-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1rem; line-height: 1.8; }
+        .article-content ul, .article-content ol { margin-bottom: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" aria-label="EYWA Extranjería - Inicio">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                        <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain" loading="eager">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                        <span class="text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase">Extranjería</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Inicio</a>
+                    <a href="../servicios.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Servicios</a>
+                    <a href="blog.html" class="text-eywa-700 font-semibold">Blog</a>
+                    <a href="../contacto.html" class="px-6 py-2.5 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors shadow-lg">Consulta</a>
+                </div>
+
+                <button class="lg:hidden flex items-center justify-center text-eywa-800 -mr-2" id="menu-btn" aria-label="Abrir menú">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="flex justify-between items-center p-4 sm:p-6 border-b border-eywa-100">
+            <span class="font-serif text-xl font-bold text-eywa-900">Menú</span>
+            <button class="flex items-center justify-center text-eywa-800" id="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times text-xl sm:text-2xl"></i>
+            </button>
+        </div>
+        <nav class="p-4 sm:p-6">
+            <a href="../index.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Inicio</a>
+            <a href="../servicios.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Servicios</a>
+            <a href="blog.html" class="block py-3 text-lg text-eywa-700 font-semibold border-b border-gray-100 border-l-4 border-eywa-600 pl-4">Blog</a>
+            <a href="../contacto.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700">Contacto</a>
+        </nav>
+    </div>
+
+    <!-- HEADER DEL ARTÍCULO -->
+    <header class="pt-24 sm:pt-28 lg:pt-32 pb-8 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+            <div class="mb-6">
+                <a href="blog.html" class="inline-flex items-center text-eywa-600 hover:text-eywa-800 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al blog
+                </a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+                <span class="bg-eywa-100 text-eywa-800 px-3 py-1 rounded-full text-sm font-medium">Legislación</span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-calendar mr-2"></i>15 Marzo 2026
+                </span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-clock mr-2"></i>5 min lectura
+                </span>
+            </div>
+
+            <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-eywa-900 leading-tight mb-6">
+                Nuevas medidas de extranjería 2026: ¿Qué cambia para los migrantes?
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                El Gobierno ha aprobado una serie de reformas significativas en la Ley de Extranjería que facilitan la regularización de trabajadores, amplían los supuestos de arraigo y agilizan los procedimientos de nacionalidad.
+            </p>
+        </div>
+    </header>
+
+    <!-- IMAGEN DESTACADA -->
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-8">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&auto=format&fit=crop&q=80" alt="Nuevas medidas de extranjería 2026: ¿Qué cambia para los migrantes?" class="w-full h-64 sm:h-80 lg:h-96 object-cover">
+        </div>
+    </div>
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <article class="bg-white pb-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
+            <div class="article-content text-gray-700">
+                
+        <p class="text-lg text-gray-600 mb-6">El Consejo de Ministros ha aprobado este mes una reforma integral de la Ley de Extranjería que introduce cambios significativos para facilitar la integración de los migrantes en España. Estas medidas, que entrarán en vigor progresivamente durante 2026, representan uno de los mayores avances legislativos en materia migratoria de los últimos años.</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Principales novedades</h2>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">1. Ampliación del arraigo social</h3>
+        <p class="text-gray-600 mb-4">Se reduce el período de estancia requerido de 3 a 2 años para solicitar el arraigo social. Además, se amplían los supuestos que justifican la excepcionalidad del arraigo, incluyendo vínculos familiares más amplios y situaciones de vulnerabilidad económica acreditada.</p>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">2. Flexibilización de permisos de trabajo</h3>
+        <p class="text-gray-600 mb-4">Los titulares de permisos de residencia y trabajo por cuenta ajena podrán cambiar a cuenta propia sin necesidad de renovar previamente su autorización. Se elimina también la necesidad de autorización previa para trabajadores altamente cualificados de países no comunitarios.</p>
+
+        <h3 class="font-semibold text-xl text-eywa-800 mt-6 mb-3">3. Agilización de la nacionalidad</h3>
+        <p class="text-gray-600 mb-4">El plazo de residencia necesario para solicitar la nacionalidad española se mantiene en 10 años, pero se introducen vías preferentes para refugiados (5 años) y para personas que hayan realizado actividades de voluntariado o integración social destacadas (reducción de 1-2 años).</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Impacto en los trámites</h2>
+        <p class="text-gray-600 mb-4">Estas reformas también incluyen medidas para reducir los plazos de resolución de expedientes. Se establece un compromiso de resolución en 3 meses para procedimientos de arraigo y 6 meses para nacionalidad, con silencio administrativo positivo en caso de no cumplirse.</p>
+
+        <div class="bg-eywa-50 border-l-4 border-eywa-600 p-4 my-6 rounded-r-lg">
+            <p class="text-eywa-800 font-medium"><i class="fas fa-info-circle mr-2"></i>Importante: Las nuevas medidas comenzarán a aplicarse a partir del 1 de mayo de 2026. Los expedientes presentados con anterioridad se regirán por la normativa anterior.</p>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">¿Qué hacer si estás en trámite?</h2>
+        <p class="text-gray-600 mb-4">Si tienes un procedimiento abierto o estás planeando iniciar uno, te recomendamos:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+            <li>Consultar con un especialista si tu caso puede beneficiarse de la nueva normativa</li>
+            <li>Valorar si es conveniente esperar a la entrada en vigor de las reformas</li>
+            <li>Mantener actualizada toda tu documentación</li>
+            <li>Verificar que cumples los nuevos requisitos reducidos</li>
+        </ul>
+
+        <p class="text-gray-600">En EYWA Extranjería estamos preparados para ayudarte a navegar estos cambios. Contacta con nosotros para una consulta personalizada sobre cómo estas reformas pueden afectar a tu situación particular.</p>
+        
+            </div>
+
+            <!-- Compartir -->
+            <div class="border-t border-gray-200 pt-8 mt-12">
+                <h3 class="font-semibold text-gray-900 mb-4">Compartir artículo</h3>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/?text=Nuevas%20medidas%20de%20extranjería%202026:%20¿Qué%20cambia%20para%20los%20migrantes?%20-%20EYWA%20Extranjería" target="_blank" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://eywaextranjeria.com/nuevas-medidas-extranjeria-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Nuevas%20medidas%20de%20extranjería%202026:%20¿Qué%20cambia%20para%20los%20migrantes?%20-%20EYWA%20Extranjería&url=https://eywaextranjeria.com/nuevas-medidas-extranjeria-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles')" class="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-eywa-50 rounded-2xl p-6 sm:p-8 mt-12 text-center">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 mb-3">¿Necesitas ayuda con tu trámite?</h3>
+                <p class="text-gray-600 mb-6">Nuestro equipo de especialistas está listo para asesorarte de manera personalizada.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://wa.me/34694236452" class="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </a>
+                    <a href="../contacto.html" class="inline-flex items-center justify-center px-6 py-3 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors">
+                        <i class="fas fa-calendar mr-2"></i>
+                        Pedir cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-eywa-900 text-eywa-200 py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="../servicios.html" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="../contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-eywa-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 lg:hidden flex justify-around items-center z-40">
+        <a href="tel:+34694236452" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-phone text-lg mb-1"></i>
+            Llamar
+        </a>
+        <a href="https://wa.me/34694236452" class="flex flex-col items-center text-green-600 text-xs">
+            <i class="fab fa-whatsapp text-lg mb-1"></i>
+            WhatsApp
+        </a>
+        <a href="../contacto.html" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-calendar text-lg mb-1"></i>
+            Cita
+        </a>
+    </div>
+    <div class="h-16 lg:hidden"></div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>

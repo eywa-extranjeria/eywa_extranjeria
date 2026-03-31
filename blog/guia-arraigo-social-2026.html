@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#3c4d3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo social con éxito.">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Guía completa del arraigo social 2026 | Blog EYWA Extranjería</title>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eywa': {
+                            50: '#f4f7f4',
+                            100: '#e3ebe3',
+                            200: '#c5d8c5',
+                            300: '#9bb99b',
+                            400: '#729672',
+                            500: '#527852',
+                            600: '#3c4d3f',
+                            700: '#303f33',
+                            800: '#28322a',
+                            900: '#222b24',
+                        },
+                        'earth': {
+                            300: '#d4a574',
+                            500: '#b8834f',
+                            600: '#9c6b3f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-serif { font-family: 'DM Serif Display', serif; }
+        .font-serif-italic { font-family: 'DM Serif Display', serif; font-style: italic; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .article-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1rem; line-height: 1.8; }
+        .article-content ul, .article-content ol { margin-bottom: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" aria-label="EYWA Extranjería - Inicio">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
+                        <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain" loading="eager">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                        <span class="text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase">Extranjería</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Inicio</a>
+                    <a href="../servicios.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Servicios</a>
+                    <a href="blog.html" class="text-eywa-700 font-semibold">Blog</a>
+                    <a href="../contacto.html" class="px-6 py-2.5 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors shadow-lg">Consulta</a>
+                </div>
+
+                <button class="lg:hidden flex items-center justify-center text-eywa-800 -mr-2" id="menu-btn" aria-label="Abrir menú">
+                    <i class="fas fa-bars text-xl sm:text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div class="flex justify-between items-center p-4 sm:p-6 border-b border-eywa-100">
+            <span class="font-serif text-xl font-bold text-eywa-900">Menú</span>
+            <button class="flex items-center justify-center text-eywa-800" id="close-menu" aria-label="Cerrar menú">
+                <i class="fas fa-times text-xl sm:text-2xl"></i>
+            </button>
+        </div>
+        <nav class="p-4 sm:p-6">
+            <a href="../index.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Inicio</a>
+            <a href="../servicios.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Servicios</a>
+            <a href="blog.html" class="block py-3 text-lg text-eywa-700 font-semibold border-b border-gray-100 border-l-4 border-eywa-600 pl-4">Blog</a>
+            <a href="../contacto.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700">Contacto</a>
+        </nav>
+    </div>
+
+    <!-- HEADER DEL ARTÍCULO -->
+    <header class="pt-24 sm:pt-28 lg:pt-32 pb-8 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+            <div class="mb-6">
+                <a href="blog.html" class="inline-flex items-center text-eywa-600 hover:text-eywa-800 transition-colors text-sm">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver al blog
+                </a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+                <span class="bg-eywa-100 text-eywa-800 px-3 py-1 rounded-full text-sm font-medium">Arraigo</span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-calendar mr-2"></i>10 Marzo 2026
+                </span>
+                <span class="text-gray-500 text-sm flex items-center">
+                    <i class="far fa-clock mr-2"></i>4 min lectura
+                </span>
+            </div>
+
+            <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-eywa-900 leading-tight mb-6">
+                Guía completa del arraigo social 2026
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo social con éxito.
+            </p>
+        </div>
+    </header>
+
+    <!-- IMAGEN DESTACADA -->
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-8">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop&q=80" alt="Guía completa del arraigo social 2026" class="w-full h-64 sm:h-80 lg:h-96 object-cover">
+        </div>
+    </div>
+
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <article class="bg-white pb-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
+            <div class="article-content text-gray-700">
+                
+        <p class="text-lg text-gray-600 mb-6">El arraigo social es una de las vías más utilizadas para regularizar la situación en España. Con las nuevas reformas de 2026, este procedimiento se ha simplificado significativamente. En esta guía te explicamos todo lo que necesitas saber.</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">¿Qué es el arraigo social?</h2>
+        <p class="text-gray-600 mb-4">El arraigo social es una autorización de residencia temporal que se concede a extranjeros que acrediten una estancia continuada en España, vinculación social y, en su caso, compromiso de empleo. Es una figura destinada a integrar a personas que ya forman parte de la realidad social española.</p>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Requisitos principales (2026)</h2>
+
+        <div class="grid md:grid-cols-2 gap-4 my-6">
+            <div class="bg-white border border-eywa-200 rounded-lg p-4">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-calendar-alt text-eywa-600 mr-2"></i>
+                    <h4 class="font-semibold text-eywa-800">Estancia</h4>
+                </div>
+                <p class="text-sm text-gray-600">2 años de estancia continuada en España (reducido de 3 años)</p>
+            </div>
+            <div class="bg-white border border-eywa-200 rounded-lg p-4">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-file-contract text-eywa-600 mr-2"></i>
+                    <h4 class="font-semibold text-eywa-800">Oferta de empleo</h4>
+                </div>
+                <p class="text-sm text-gray-600">Contrato de trabajo de al menos 1 año o 30h/semana</p>
+            </div>
+            <div class="bg-white border border-eywa-200 rounded-lg p-4">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-user-check text-eywa-600 mr-2"></i>
+                    <h4 class="font-semibold text-eywa-800">Integración</h4>
+                </div>
+                <p class="text-sm text-gray-600">Informe de integración social favorable del ayuntamiento</p>
+            </div>
+            <div class="bg-white border border-eywa-200 rounded-lg p-4">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-ban text-eywa-600 mr-2"></i>
+                    <h4 class="font-semibold text-eywa-800">Antecedentes</h4>
+                </div>
+                <p class="text-sm text-gray-600">No estar prohibida la entrada en España ni tener antecedentes penales</p>
+            </div>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Documentación necesaria</h2>
+        <ul class="space-y-3 text-gray-600 mb-6">
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Formulario EX-10 cumplimentado</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Pasaporte completo y vigente</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Justificantes de estancia (empadronamiento de 2 años)</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Contrato de trabajo o promesa de contrato</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Informe de arraigo del ayuntamiento</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Certificado de antecedentes penales del país de origen (traducido)</span>
+            </li>
+            <li class="flex items-start">
+                <i class="fas fa-check-circle text-earth-500 mt-1 mr-3"></i>
+                <span>Tasa 790 código 052 (tasa de arraigo)</span>
+            </li>
+        </ul>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">El informe de integración social</h2>
+        <p class="text-gray-600 mb-4">Este informe, emitido por los Servicios Sociales del ayuntamiento donde estás empadronado, es clave. Valoran:</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-1">
+            <li>Tiempo de estancia y empadronamiento</li>
+            <li>Vínculos familiares en España</li>
+            <li>Participación en la comunidad</li>
+            <li>Formación o estudios realizados</li>
+            <li>Conocimiento de idiomas</li>
+        </ul>
+
+        <div class="bg-earth-50 border-l-4 border-earth-500 p-4 my-6 rounded-r-lg">
+            <p class="text-earth-800"><i class="fas fa-lightbulb mr-2"></i><strong>Consejo:</strong> Solicita el informe con al menos 2 meses de antelación a tu cita de extranjería, ya que los plazos de emisión varían según el ayuntamiento.</p>
+        </div>
+
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Procedimiento paso a paso</h2>
+        <ol class="list-decimal list-inside text-gray-600 mb-6 space-y-3">
+            <li><strong>Prepara la documentación:</strong> Reúne todos los documentos necesarios verificando que estén vigentes.</li>
+            <li><strong>Solicita el informe de arraigo:</strong> Acude a Servicios Sociales de tu ayuntamiento.</li>
+            <li><strong>Consigue la oferta de trabajo:</strong> El empleador debe cumplir requisitos de cotización.</li>
+            <li><strong>Pide cita previa:</strong> Solicita cita en la oficina de extranjería para "AUTORIZACIONES - ARRAIGO".</li>
+            <li><strong>Presenta la solicitud:</strong> Entrega toda la documentación el día de la cita.</li>
+            <li><strong>Resolución:</strong> El plazo máximo es de 3 meses desde la entrada en vigor de las nuevas medidas.</li>
+        </ol>
+
+        <p class="text-gray-600">¿Necesitas ayuda con tu solicitud de arraigo? En EYWA Extranjería te acompañamos en todo el proceso, desde la preparación de documentación hasta el seguimiento de tu expediente.</p>
+        
+            </div>
+
+            <!-- Compartir -->
+            <div class="border-t border-gray-200 pt-8 mt-12">
+                <h3 class="font-semibold text-gray-900 mb-4">Compartir artículo</h3>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería" target="_blank" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería&url=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles')" class="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-link"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-eywa-50 rounded-2xl p-6 sm:p-8 mt-12 text-center">
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 mb-3">¿Necesitas ayuda con tu trámite?</h3>
+                <p class="text-gray-600 mb-6">Nuestro equipo de especialistas está listo para asesorarte de manera personalizada.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://wa.me/34694236452" class="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </a>
+                    <a href="../contacto.html" class="inline-flex items-center justify-center px-6 py-3 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors">
+                        <i class="fas fa-calendar mr-2"></i>
+                        Pedir cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-eywa-900 text-eywa-200 py-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                            <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">EYWA</span>
+                    </div>
+                    <p class="text-sm text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="../servicios.html" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="../contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-eywa-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 lg:hidden flex justify-around items-center z-40">
+        <a href="tel:+34694236452" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-phone text-lg mb-1"></i>
+            Llamar
+        </a>
+        <a href="https://wa.me/34694236452" class="flex flex-col items-center text-green-600 text-xs">
+            <i class="fab fa-whatsapp text-lg mb-1"></i>
+            WhatsApp
+        </a>
+        <a href="../contacto.html" class="flex flex-col items-center text-eywa-700 text-xs">
+            <i class="fas fa-calendar text-lg mb-1"></i>
+            Cita
+        </a>
+    </div>
+    <div class="h-16 lg:hidden"></div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>
