@@ -28,7 +28,6 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-<base target="_blank">
 </head>
 <body class="antialiased">
 
@@ -84,11 +83,11 @@
             <a href="contacto.html" class="mobile-menu-link">Contacto</a>
 
             <div class="mt-8 space-y-3">
-                <a href="tel:+34694236452" class="btn btn-primary btn-mobile w-full">
+                <a href="tel:+34694236452" target="_blank" class="btn btn-primary btn-mobile w-full">
                     <i class="fas fa-phone mr-2"></i>
                     Llamar Ahora
                 </a>
-                <a href="https://wa.me/34694236452" class="btn btn-whatsapp btn-mobile w-full">
+                <a href="https://wa.me/34694236452" target="_blank" class="btn btn-whatsapp btn-mobile w-full">
                     <i class="fab fa-whatsapp mr-2 text-xl"></i>
                     WhatsApp
                 </a>
@@ -346,8 +345,8 @@
                     <h4 class="text-white font-semibold mb-2 sm:mb-4 text-sm sm:text-base">Contacto</h4>
                     <ul class="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
                         <li>Valencia, España</li>
-                        <li class="break-all">eywaextranjeria@gmail.com</li>
-                        <li>+34 694 236 452</li>
+                        <li class="break-all"><a href="mailto:eywaextranjeria@gmail.com" target="_blank" class="footer-link">eywaextranjeria@gmail.com</a></li>
+                        <li><a href="tel:+34694236452" target="_blank" class="footer-link">+34 694 236 452</a></li>
                         <li>Lun-Vie: 9:00 - 18:00</li>
                     </ul>
                 </div>
@@ -368,11 +367,11 @@
          MOBILE CTA BAR (Fija abajo)
          ============================================ -->
     <div class="mobile-cta-bar lg:hidden">
-        <a href="tel:+34694236452" class="btn-cta-bar bg-eywa-700 text-white">
+        <a href="tel:+34694236452" target="_blank" class="btn-cta-bar bg-eywa-700 text-white">
             <i class="fas fa-phone"></i>
             <span class="hidden sm:inline">Llamar</span>
         </a>
-        <a href="https://wa.me/34694236452" class="btn-cta-bar btn-whatsapp">
+        <a href="https://wa.me/34694236452" target="_blank" class="btn-cta-bar btn-whatsapp">
             <i class="fab fa-whatsapp text-lg"></i>
             <span class="hidden sm:inline">WhatsApp</span>
         </a>
