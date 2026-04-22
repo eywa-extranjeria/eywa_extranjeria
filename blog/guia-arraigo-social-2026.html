@@ -4,221 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#3c4d3f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo social con éxito.">
-    <title>Guía completa del arraigo social 2026 | Blog EYWA Extranjería [EDITABLE]</title>
+    <meta name="format-detection" content="telephone=no">
 
+    <title>Guía completa del arraigo social 2026 | Blog EYWA Extranjería</title>
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../css/mobile-optimized.css">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; }
-        .font-serif { font-family: 'DM Serif Display', serif; }
-        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-
-        /* Sistema de edición */
-        .editor-toolbar {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            padding: 12px;
-            z-index: 9999;
-            display: none;
-            flex-direction: column;
-            gap: 8px;
-            min-width: 200px;
-            border: 2px solid #3c4d3f;
-        }
-
-        .editor-toolbar.active { display: flex; }
-
-        .toolbar-header {
-            font-size: 12px;
-            font-weight: 600;
-            color: #3c4d3f;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 4px;
-        }
-
-        .toolbar-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
-            border-radius: 8px;
-            border: none;
-            background: #f3f4f6;
-            color: #374151;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .toolbar-btn:hover { background: #3c4d3f; color: white; }
-
-        .toolbar-divider { height: 1px; background: #e5e7eb; margin: 4px 0; }
-
-        .edit-mode-indicator {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #3c4d3f;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 500;
-            z-index: 9998;
-            display: none;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .edit-mode-indicator.active { display: flex; }
-
-        [contenteditable="true"] {
-            outline: none;
-            border-radius: 4px;
-            transition: all 0.2s;
-            position: relative;
-        }
-
-        [contenteditable="true"]:hover {
-            background: rgba(60, 77, 63, 0.05);
-            box-shadow: inset 0 0 0 2px rgba(60, 77, 63, 0.2);
-        }
-
-        [contenteditable="true"]:focus {
-            background: white;
-            box-shadow: inset 0 0 0 2px #3c4d3f, 0 4px 20px rgba(0,0,0,0.1);
-            padding: 8px;
-            margin: -8px;
-            z-index: 10;
-        }
-
-        .editable-highlight [contenteditable="true"]:not(:focus) {
-            box-shadow: inset 0 0 0 1px dashed rgba(60, 77, 63, 0.3);
-        }
-
-        .edit-toggle-btn {
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #3c4d3f;
-            color: white;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            z-index: 9997;
-            transition: all 0.3s;
-        }
-
-        .edit-toggle-btn:hover { transform: scale(1.1); background: #2d3a2f; }
-        .edit-toggle-btn.editing { background: #dc2626; }
-
-        .editor-notification {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: #3c4d3f;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 14px;
-            z-index: 10000;
-            opacity: 0;
-            transition: all 0.3s;
-        }
-
-        .editor-notification.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-
-        @media (max-width: 1024px) {
-            .editor-toolbar {
-                top: auto;
-                bottom: 170px;
-                right: 10px;
-                left: 10px;
-                min-width: auto;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eywa': {
+                            50: '#f4f7f4',
+                            100: '#e3ebe3',
+                            200: '#c5d8c5',
+                            300: '#9bb99b',
+                            400: '#729672',
+                            500: '#527852',
+                            600: '#3c4d3f',
+                            700: '#303f33',
+                            800: '#28322a',
+                            900: '#222b24',
+                        },
+                        'earth': {
+                            300: '#d4a574',
+                            500: '#b8834f',
+                            600: '#9c6b3f',
+                        }
+                    }
+                }
             }
-            .toolbar-header { width: 100%; text-align: center; }
-            .toolbar-divider { display: none; }
         }
+    </script>
+    <style>
+        .font-serif { font-family: 'DM Serif Display', serif; }
+        .font-serif-italic { font-family: 'DM Serif Display', serif; font-style: italic; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .article-content h2 { margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1rem; line-height: 1.8; }
+        .article-content ul, .article-content ol { margin-bottom: 1.5rem; }
+        .article-content li { margin-bottom: 0.5rem; }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.inset-0{inset:0px}.bottom-0{bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.mx-auto{margin-left:auto;margin-right:auto}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.-mr-2{margin-right:-0.5rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mt-12{margin-top:3rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-16{height:4rem}.h-64{height:16rem}.h-9{height:2.25rem}.h-full{height:100%}.w-10{width:2.5rem}.w-9{width:2.25rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.flex-shrink-0{flex-shrink:0}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-16{padding-bottom:4rem}.pb-8{padding-bottom:2rem}.pl-4{padding-left:1rem}.pt-24{padding-top:6rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-serif{font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-widest{letter-spacing:0.1em}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-600:hover{--tw-bg-opacity:1;background-color:rgb(2 132 199 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:h-10{height:2.5rem}.sm\:h-20{height:5rem}.sm\:h-80{height:20rem}.sm\:w-10{width:2.5rem}.sm\:flex-row{flex-direction:row}.sm\:gap-8{gap:2rem}.sm\:space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-28{padding-top:7rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 768px){.md\:col-span-1{grid-column:span 1 / span 1}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:h-96{height:24rem}.lg\:pt-32{padding-top:8rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 1280px){.xl\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.xl\:text-5xl{font-size:3rem;line-height:1}}</style></head>
-<body class="antialiased bg-gray-50 editable-highlight">
-
-    <!-- Indicador de modo edición -->
-    
-
-    <!-- Barra de herramientas -->
-    
-
-    <!-- Botón toggle -->
-    
-
-    <!-- Notificación -->
-    
-
-    <!-- CONTENIDO ORIGINAL -->
-    
+</head>
+<body class="antialiased bg-gray-50">
 
     <!-- NAVEGACIÓN -->
-    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300 shadow-md" id="navbar">
+    <nav class="fixed w-full z-50 top-0 glass-nav transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16 sm:h-20">
-                <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" aria-label="EYWA Extranjería - Inicio" data-original="
-                    &lt;div class=&quot;w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center&quot;&gt;
-                        &lt;img src=&quot;../images/logo.jpeg&quot; alt=&quot;EYWA&quot; class=&quot;w-full h-full object-contain&quot; loading=&quot;eager&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;flex flex-col&quot;&gt;
-                        &lt;span class=&quot;font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none&quot;&gt;EYWA&lt;/span&gt;
-                        &lt;span class=&quot;text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase&quot;&gt;Extranjería&lt;/span&gt;
-                    &lt;/div&gt;
-                " style="pointer-events: auto; cursor: text;">
+                <a href="../index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0" aria-label="EYWA Extranjería - Inicio">
                     <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-eywa-100 flex items-center justify-center">
                         <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain" loading="eager">
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none" data-original="EYWA" style="pointer-events: auto; cursor: text;">EYWA</span>
-                        <span class="text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase" data-original="Extranjería" style="pointer-events: auto; cursor: text;">Extranjería</span>
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 leading-none">EYWA</span>
+                        <span class="text-[10px] sm:text-xs text-eywa-600 tracking-widest uppercase">Extranjería</span>
                     </div>
                 </a>
 
                 <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
-                    <a href="../index.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors" data-original="Inicio" style="pointer-events: auto; cursor: text;">Inicio</a>
-                    <a href="../servicios.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors" data-original="Servicios" style="pointer-events: auto; cursor: text;">Servicios</a>
-                    <a href="blog.html" class="text-eywa-700 font-semibold" data-original="Blog" style="pointer-events: auto; cursor: text;">Blog</a>
-                    <a href="../contacto.html" class="px-6 py-2.5 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors shadow-lg" data-original="Consulta" style="pointer-events: auto; cursor: text;">Consulta</a>
+                    <a href="../index.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Inicio</a>
+                    <a href="../servicios.html" class="text-gray-600 hover:text-eywa-700 font-medium transition-colors">Servicios</a>
+                    <a href="blog.html" class="text-eywa-700 font-semibold">Blog</a>
+                    <a href="../contacto.html" class="px-6 py-2.5 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors shadow-lg">Consulta</a>
                 </div>
 
-                <button class="lg:hidden flex items-center justify-center text-eywa-800 -mr-2" id="menu-btn" aria-label="Abrir menú" data-original="
-                    &lt;i class=&quot;fas fa-bars text-xl sm:text-2xl&quot;&gt;&lt;/i&gt;
-                " style="pointer-events: auto; cursor: text;">
+                <button class="lg:hidden flex items-center justify-center text-eywa-800 -mr-2" id="menu-btn" aria-label="Abrir menú">
                     <i class="fas fa-bars text-xl sm:text-2xl"></i>
                 </button>
             </div>
@@ -228,18 +98,16 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden">
         <div class="flex justify-between items-center p-4 sm:p-6 border-b border-eywa-100">
-            <span class="font-serif text-xl font-bold text-eywa-900" data-original="Menú" style="pointer-events: auto; cursor: text;">Menú</span>
-            <button class="flex items-center justify-center text-eywa-800" id="close-menu" aria-label="Cerrar menú" data-original="
-                &lt;i class=&quot;fas fa-times text-xl sm:text-2xl&quot;&gt;&lt;/i&gt;
-            " style="pointer-events: auto; cursor: text;">
+            <span class="font-serif text-xl font-bold text-eywa-900">Menú</span>
+            <button class="flex items-center justify-center text-eywa-800" id="close-menu" aria-label="Cerrar menú">
                 <i class="fas fa-times text-xl sm:text-2xl"></i>
             </button>
         </div>
         <nav class="p-4 sm:p-6">
-            <a href="../index.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100" data-original="Inicio" style="pointer-events: auto; cursor: text;">Inicio</a>
-            <a href="../servicios.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100" data-original="Servicios" style="pointer-events: auto; cursor: text;">Servicios</a>
-            <a href="blog.html" class="block py-3 text-lg text-eywa-700 font-semibold border-b border-gray-100 border-l-4 border-eywa-600 pl-4" data-original="Blog" style="pointer-events: auto; cursor: text;">Blog</a>
-            <a href="../contacto.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700" data-original="Contacto" style="pointer-events: auto; cursor: text;">Contacto</a>
+            <a href="../index.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Inicio</a>
+            <a href="../servicios.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700 border-b border-gray-100">Servicios</a>
+            <a href="blog.html" class="block py-3 text-lg text-eywa-700 font-semibold border-b border-gray-100 border-l-4 border-eywa-600 pl-4">Blog</a>
+            <a href="../contacto.html" class="block py-3 text-lg text-gray-700 hover:text-eywa-700">Contacto</a>
         </nav>
     </div>
 
@@ -247,39 +115,28 @@
     <header class="pt-24 sm:pt-28 lg:pt-32 pb-8 bg-white">
         <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
             <div class="mb-6">
-                <a href="blog.html" class="inline-flex items-center text-eywa-600 hover:text-eywa-800 transition-colors text-sm" data-original="
-                    &lt;i class=&quot;fas fa-arrow-left mr-2&quot;&gt;&lt;/i&gt;
-                    Volver al blog
-                " style="pointer-events: auto; cursor: text;">
+                <a href="blog.html" class="inline-flex items-center text-eywa-600 hover:text-eywa-800 transition-colors text-sm">
                     <i class="fas fa-arrow-left mr-2"></i>
                     Volver al blog
                 </a>
             </div>
 
             <div class="flex flex-wrap items-center gap-3 mb-4">
-                <span class="bg-eywa-100 text-eywa-800 px-3 py-1 rounded-full text-sm font-medium" data-original="Arraigo" style="pointer-events: auto; cursor: text;">Arraigo</span>
-                <span class="text-gray-500 text-sm flex items-center" data-original="
-                    &lt;i class=&quot;far fa-calendar mr-2&quot;&gt;&lt;/i&gt;10 Marzo 2026
-                " style="pointer-events: auto; cursor: text;">
+                <span class="bg-eywa-100 text-eywa-800 px-3 py-1 rounded-full text-sm font-medium">Arraigo</span>
+                <span class="text-gray-500 text-sm flex items-center">
                     <i class="far fa-calendar mr-2"></i>10 Marzo 2026
                 </span>
-                <span class="text-gray-500 text-sm flex items-center" data-original="
-                    &lt;i class=&quot;far fa-clock mr-2&quot;&gt;&lt;/i&gt;4 min lectura
-                " style="pointer-events: auto; cursor: text;">
+                <span class="text-gray-500 text-sm flex items-center">
                     <i class="far fa-clock mr-2"></i>4 min lectura
                 </span>
             </div>
 
-            <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-eywa-900 leading-tight mb-6" data-original="
+            <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-eywa-900 leading-tight mb-6">
                 Guía completa del arraigo social 2026
-            " style="pointer-events: auto; cursor: text;">
-                Guía completa del arraigo sociolaboral 2026
             </h1>
 
-            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed" data-original="
+            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo social con éxito.
-            " style="pointer-events: auto; cursor: text;">
-                Requisitos actualizados, documentación necesaria y consejos prácticos para obtener el arraigo sociolaboral con éxito.
             </p>
         </div>
     </header>
@@ -287,7 +144,7 @@
     <!-- IMAGEN DESTACADA -->
     <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-8">
         <div class="rounded-2xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="Guía completa del arraigo social 2026" class="w-full h-64 sm:h-80 lg:h-96 object-cover">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&auto=format&fit=crop&q=80" alt="Guía completa del arraigo social 2026" class="w-full h-64 sm:h-80 lg:h-96 object-cover">
         </div>
     </div>
 
@@ -296,82 +153,74 @@
         <div class="container mx-auto px-4 sm:px-6 max-w-3xl">
             <div class="article-content text-gray-700">
                 
-        <p class="text-lg text-gray-600 mb-6" data-original="El arraigo social es una de las vías más utilizadas para regularizar la situación en España. Con las nuevas reformas de 2026, este procedimiento se ha simplificado significativamente. En esta guía te explicamos todo lo que necesitas saber." style="pointer-events: auto; cursor: text;">El arraigo sociolaboral es una de las vías más utilizadas para regularizar la situación en España. Con las nuevas reformas de 2026, este procedimiento se ha simplificado significativamente. En esta guía te explicamos todo lo que necesitas saber.</p>
+        <p class="text-lg text-gray-600 mb-6">El arraigo social es una de las vías más utilizadas para regularizar la situación en España. Con las nuevas reformas de 2026, este procedimiento se ha simplificado significativamente. En esta guía te explicamos todo lo que necesitas saber.</p>
 
-        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4" data-original="¿Qué es el arraigo social?" style="pointer-events: auto; cursor: text;">¿Qué es el arraigo social?</h2>
-        <p class="text-gray-600 mb-4" data-original="El arraigo social es una autorización de residencia temporal que se concede a extranjeros que acrediten una estancia continuada en España, vinculación social y, en su caso, compromiso de empleo. Es una figura destinada a integrar a personas que ya forman parte de la realidad social española." style="pointer-events: auto; cursor: text;">El arraigo sociolaboral es una autorización de residencia temporal que se concede a extranjeros que acrediten una estancia continuada en España, vinculación social y, en su caso, compromiso de empleo. Es una figura destinada a integrar a personas que ya forman parte de la realidad social española.</p>
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">¿Qué es el arraigo social?</h2>
+        <p class="text-gray-600 mb-4">El arraigo social es una autorización de residencia temporal que se concede a extranjeros que acrediten una estancia continuada en España, vinculación social y, en su caso, compromiso de empleo. Es una figura destinada a integrar a personas que ya forman parte de la realidad social española.</p>
 
-        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4" data-original="Requisitos principales (2026)" style="pointer-events: auto; cursor: text;">Requisitos principales (2026)</h2>
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Requisitos principales (2026)</h2>
 
         <div class="grid md:grid-cols-2 gap-4 my-6">
             <div class="bg-white border border-eywa-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
                     <i class="fas fa-calendar-alt text-eywa-600 mr-2"></i>
-                    <h4 class="font-semibold text-eywa-800" data-original="Estancia" style="pointer-events: auto; cursor: text;">Estancia</h4>
+                    <h4 class="font-semibold text-eywa-800">Estancia</h4>
                 </div>
-                <p class="text-sm text-gray-600" data-original="2 años de estancia continuada en España (reducido de 3 años)" style="pointer-events: auto; cursor: text;">2 años de estancia continuada en España (reducido de 3 años)</p>
+                <p class="text-sm text-gray-600">2 años de estancia continuada en España (reducido de 3 años)</p>
             </div>
             <div class="bg-white border border-eywa-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
                     <i class="fas fa-file-contract text-eywa-600 mr-2"></i>
-                    <h4 class="font-semibold text-eywa-800" data-original="Oferta de empleo" style="pointer-events: auto; cursor: text;">Oferta de empleo</h4>
+                    <h4 class="font-semibold text-eywa-800">Oferta de empleo</h4>
                 </div>
-                <p class="text-sm text-gray-600" data-original="Uno o varios contratos que garanticen 20h semanales y el salario proporcional a las horas trabajadas" style="pointer-events: auto; cursor: text;">Uno o varios contratos que garanticen 20h semanales y el salario proporcional a las horas trabajadas</p>
+                <p class="text-sm text-gray-600">Uno o varios contratos que garanticen 20h semanales y el salario proporcional a las horas trabajadas</p>
             </div>
             <div class="bg-white border border-eywa-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
                     <i class="fas fa-user-check text-eywa-600 mr-2"></i>
-                    <h4 class="font-semibold text-eywa-800" data-original="Solvencia de la empresa" style="pointer-events: auto; cursor: text;">Solvencia de la empresa</h4>
+                    <h4 class="font-semibold text-eywa-800">Solvencia de la empresa</h4>
                 </div>
-                <p class="text-sm text-gray-600" data-original="La empresa debe estar al corriente de pagos y contar con medios económicos suficientes para contratar a un nuevo trabajador" style="pointer-events: auto; cursor: text;">La empresa debe estar al corriente de pagos y contar con medios económicos suficientes para contratar a un nuevo trabajador</p>
+                <p class="text-sm text-gray-600">La empresa debe estar al corriente de pagos y contar con medios económicos suficientes para contratar a un nuevo trabajador</p>
             </div>
             <div class="bg-white border border-eywa-200 rounded-lg p-4">
                 <div class="flex items-center mb-2">
                     <i class="fas fa-ban text-eywa-600 mr-2"></i>
-                    <h4 class="font-semibold text-eywa-800" data-original="Antecedentes" style="pointer-events: auto; cursor: text;">Antecedentes</h4>
+                    <h4 class="font-semibold text-eywa-800">Antecedentes</h4>
                 </div>
-                <p class="text-sm text-gray-600" data-original="Carecer de antecedentes penales y policiales tanto en España como en el país de origen" style="pointer-events: auto; cursor: text;">Carecer de antecedentes penales y policiales tanto en España como en el país de origen</p>
+                <p class="text-sm text-gray-600">Carecer de antecedentes penales y policiales tanto en España como en el país de origen</p>
             </div>
         </div>
 
-        <p class="text-gray-600 mb-4" data-original="Para este procedimiento ya no es necesario presentar informe de integración, lo cual facilita mucho las posibilidades de éxito." style="pointer-events: auto; cursor: text;">Para este procedimiento ya no es necesario presentar informe de integración, lo cual facilita mucho las posibilidades de éxito.</p>
+        <p class="text-gray-600 mb-4">Para este procedimiento ya no es necesario presentar informe de integración, lo cual facilita mucho las posibilidades de éxito.</p>
 
-        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4" data-original="Procedimiento paso a paso" style="pointer-events: auto; cursor: text;">Procedimiento paso a paso</h2>
+        <h2 class="font-serif text-2xl font-bold text-eywa-900 mt-8 mb-4">Procedimiento paso a paso</h2>
         <ol class="list-decimal list-inside text-gray-600 mb-6 space-y-3">
-            <li data-original="&lt;strong&gt;Prepara la documentación:&lt;/strong&gt; Reúne todos los documentos necesarios verificando que estén vigentes." style="pointer-events: auto; cursor: text;"><strong data-original="Prepara la documentación:" style="pointer-events: auto; cursor: text;">Prepara la documentación:</strong> Reúne todos los documentos necesarios verificando que estén vigentes.</li>
-            <li data-original="&lt;strong&gt;Solicita el informe de arraigo:&lt;/strong&gt; Acude a Servicios Sociales de tu ayuntamiento." style="pointer-events: auto; cursor: text;"><strong data-original="Solicita el informe de arraigo:" style="pointer-events: auto; cursor: text;">Solicita el informe de arraigo:</strong> Acude a Servicios Sociales de tu ayuntamiento.</li>
-            <li data-original="&lt;strong&gt;Consigue la oferta de trabajo:&lt;/strong&gt; El empleador debe cumplir requisitos de cotización." style="pointer-events: auto; cursor: text;"><strong data-original="Consigue la oferta de trabajo:" style="pointer-events: auto; cursor: text;">Consigue la oferta de trabajo:</strong> El empleador debe cumplir requisitos de cotización.</li>
-            <li data-original="&lt;strong&gt;Pide cita previa:&lt;/strong&gt; Solicita cita en la oficina de extranjería para &quot;AUTORIZACIONES - ARRAIGO&quot;." style="pointer-events: auto; cursor: text;"><strong data-original="Pide cita previa:" style="pointer-events: auto; cursor: text;">Pide cita previa:</strong> Solicita cita en la oficina de extranjería para "AUTORIZACIONES - ARRAIGO".</li>
-            <li data-original="&lt;strong&gt;Presenta la solicitud:&lt;/strong&gt; Entrega toda la documentación el día de la cita." style="pointer-events: auto; cursor: text;"><strong data-original="Presenta la solicitud:" style="pointer-events: auto; cursor: text;">Presenta la solicitud:</strong> Entrega toda la documentación el día de la cita.</li>
-            <li data-original="&lt;strong&gt;Resolución:&lt;/strong&gt; El plazo máximo es de 3 meses desde la entrada en vigor de las nuevas medidas." style="pointer-events: auto; cursor: text;"><strong data-original="Resolución:" style="pointer-events: auto; cursor: text;">Resolución:</strong> El plazo máximo es de 3 meses desde la entrada en vigor de las nuevas medidas.</li>
+            <li><strong>Prepara la documentación:</strong> Reúne todos los documentos necesarios verificando que estén vigentes.</li>
+            <li><strong>Solicita el informe de arraigo:</strong> Acude a Servicios Sociales de tu ayuntamiento.</li>
+            <li><strong>Consigue la oferta de trabajo:</strong> El empleador debe cumplir requisitos de cotización.</li>
+            <li><strong>Pide cita previa:</strong> Solicita cita en la oficina de extranjería para "AUTORIZACIONES - ARRAIGO".</li>
+            <li><strong>Presenta la solicitud:</strong> Entrega toda la documentación el día de la cita.</li>
+            <li><strong>Resolución:</strong> El plazo máximo es de 3 meses desde la entrada en vigor de las nuevas medidas.</li>
         </ol>
 
-        <p class="text-gray-600" data-original="¿Necesitas ayuda con tu solicitud de arraigo? En EYWA Extranjería te acompañamos en todo el proceso, desde la preparación de documentación hasta el seguimiento de tu expediente." style="pointer-events: auto; cursor: text;">¿Necesitas ayuda con tu solicitud de arraigo? En EYWA Extranjería te acompañamos en todo el proceso, desde la preparación de documentación hasta el seguimiento de tu expediente.</p>
+        <p class="text-gray-600">¿Necesitas ayuda con tu solicitud de arraigo? En EYWA Extranjería te acompañamos en todo el proceso, desde la preparación de documentación hasta el seguimiento de tu expediente.</p>
         
             </div>
 
             <!-- Compartir -->
             <div class="border-t border-gray-200 pt-8 mt-12">
-                <h3 class="font-semibold text-gray-900 mb-4" data-original="Compartir artículo" style="pointer-events: auto; cursor: text;">Compartir artículo</h3>
+                <h3 class="font-semibold text-gray-900 mb-4">Compartir artículo</h3>
                 <div class="flex space-x-4">
-                    <a href="https://wa.me/?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería" target="_blank" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors" data-original="
-                        &lt;i class=&quot;fab fa-whatsapp&quot;&gt;&lt;/i&gt;
-                    " style="pointer-events: auto; cursor: text;">
+                    <a href="https://wa.me/?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería" target="_blank" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors" data-original="
-                        &lt;i class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;
-                    " style="pointer-events: auto; cursor: text;">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://twitter.com/intent/tweet?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería&amp;url=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors" data-original="
-                        &lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;
-                    " style="pointer-events: auto; cursor: text;">
+                    <a href="https://twitter.com/intent/tweet?text=Guía%20completa%20del%20arraigo%20social%202026%20-%20EYWA%20Extranjería&url=https://eywaextranjeria.com/guia-arraigo-social-2026.html" target="_blank" class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles')" class="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-700 transition-colors" data-original="
-                        &lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;
-                    " style="pointer-events: auto; cursor: text;">
+                    <button onclick="navigator.clipboard.writeText(window.location.href); alert('Enlace copiado al portapapeles')" class="w-10 h-10 rounded-full bg-gray-600 text-white flex items-center justify-center hover:bg-gray-700 transition-colors">
                         <i class="fas fa-link"></i>
                     </button>
                 </div>
@@ -379,20 +228,14 @@
 
             <!-- CTA -->
             <div class="bg-eywa-50 rounded-2xl p-6 sm:p-8 mt-12 text-center">
-                <h3 class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 mb-3" data-original="¿Necesitas ayuda con tu trámite?" style="pointer-events: auto; cursor: text;">¿Necesitas ayuda con tu trámite?</h3>
-                <p class="text-gray-600 mb-6" data-original="Nuestro equipo de especialistas está listo para asesorarte de manera personalizada." style="pointer-events: auto; cursor: text;">Nuestro equipo de especialistas está listo para asesorarte de manera personalizada.</p>
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-eywa-900 mb-3">¿Necesitas ayuda con tu trámite?</h3>
+                <p class="text-gray-600 mb-6">Nuestro equipo de especialistas está listo para asesorarte de manera personalizada.</p>
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                    <a href="https://wa.me/34694236452" class="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors" data-original="
-                        &lt;i class=&quot;fab fa-whatsapp mr-2&quot;&gt;&lt;/i&gt;
-                        WhatsApp
-                    " style="pointer-events: auto; cursor: text;">
+                    <a href="https://wa.me/34694236452" class="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-colors">
                         <i class="fab fa-whatsapp mr-2"></i>
                         WhatsApp
                     </a>
-                    <a href="../contacto.html" class="inline-flex items-center justify-center px-6 py-3 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors" data-original="
-                        &lt;i class=&quot;fas fa-calendar mr-2&quot;&gt;&lt;/i&gt;
-                        Pedir cita
-                    " style="pointer-events: auto; cursor: text;">
+                    <a href="../contacto.html" class="inline-flex items-center justify-center px-6 py-3 bg-eywa-700 text-white rounded-full font-semibold hover:bg-eywa-800 transition-colors">
                         <i class="fas fa-calendar mr-2"></i>
                         Pedir cita
                     </a>
@@ -410,54 +253,45 @@
                         <div class="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
                             <img src="../images/logo.jpeg" alt="EYWA" class="w-full h-full object-contain">
                         </div>
-                        <span class="font-serif text-xl font-bold text-white" data-original="EYWA" style="pointer-events: auto; cursor: text;">EYWA</span>
+                        <span class="font-serif text-xl font-bold text-white">EYWA</span>
                     </div>
-                    <p class="text-sm text-eywa-300" data-original="Especialistas en derecho de extranjería. Desde Valencia, para toda España." style="pointer-events: auto; cursor: text;">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
+                    <p class="text-sm text-eywa-300">Especialistas en derecho de extranjería. Desde Valencia, para toda España.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4" data-original="Navegación" style="pointer-events: auto; cursor: text;">Navegación</h4>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
                     <ul class="space-y-2 text-sm">
-                        <li data-original="&lt;a href=&quot;../index.html&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Inicio&lt;/a&gt;" style="pointer-events: auto; cursor: text;"><a href="../index.html" class="hover:text-white transition-colors" data-original="Inicio" style="pointer-events: auto; cursor: text;">Inicio</a></li>
-                        <li data-original="&lt;a href=&quot;../servicios.html&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Servicios&lt;/a&gt;" style="pointer-events: auto; cursor: text;"><a href="../servicios.html" class="hover:text-white transition-colors" data-original="Servicios" style="pointer-events: auto; cursor: text;">Servicios</a></li>
-                        <li data-original="&lt;a href=&quot;blog.html&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Blog&lt;/a&gt;" style="pointer-events: auto; cursor: text;"><a href="blog.html" class="hover:text-white transition-colors" data-original="Blog" style="pointer-events: auto; cursor: text;">Blog</a></li>
-                        <li data-original="&lt;a href=&quot;../contacto.html&quot; class=&quot;hover:text-white transition-colors&quot;&gt;Contacto&lt;/a&gt;" style="pointer-events: auto; cursor: text;"><a href="../contacto.html" class="hover:text-white transition-colors" data-original="Contacto" style="pointer-events: auto; cursor: text;">Contacto</a></li>
+                        <li><a href="../index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="../servicios.html" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="../contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-semibold mb-4" data-original="Contacto" style="pointer-events: auto; cursor: text;">Contacto</h4>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
                     <ul class="space-y-2 text-sm">
-                        <li data-original="Valencia, España" style="pointer-events: auto; cursor: text;">Valencia, España</li>
-                        <li data-original="eywaextranjeria@gmail.com" style="pointer-events: auto; cursor: text;">eywaextranjeria@gmail.com</li>
-                        <li data-original="+34 694 236 452" style="pointer-events: auto; cursor: text;">+34 694 236 452</li>
+                        <li>Valencia, España</li>
+                        <li>eywaextranjeria@gmail.com</li>
+                        <li>+34 694 236 452</li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-eywa-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
-                <p class="text-sm text-eywa-400" data-original="© 2026 EYWA Extranjería. Todos los derechos reservados." style="pointer-events: auto; cursor: text;">© 2026 EYWA Extranjería. Todos los derechos reservados.</p>
+                <p class="text-sm text-eywa-400">&copy; 2026 EYWA Extranjería. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 lg:hidden flex justify-around items-center z-40">
-        <a href="tel:+34694236452" class="flex flex-col items-center text-eywa-700 text-xs" data-original="
-            &lt;i class=&quot;fas fa-phone text-lg mb-1&quot;&gt;&lt;/i&gt;
-            Llamar
-        " style="pointer-events: auto; cursor: text;">
+        <a href="tel:+34694236452" class="flex flex-col items-center text-eywa-700 text-xs">
             <i class="fas fa-phone text-lg mb-1"></i>
             Llamar
         </a>
-        <a href="https://wa.me/34694236452" class="flex flex-col items-center text-green-600 text-xs" data-original="
-            &lt;i class=&quot;fab fa-whatsapp text-lg mb-1&quot;&gt;&lt;/i&gt;
-            WhatsApp
-        " style="pointer-events: auto; cursor: text;">
+        <a href="https://wa.me/34694236452" class="flex flex-col items-center text-green-600 text-xs">
             <i class="fab fa-whatsapp text-lg mb-1"></i>
             WhatsApp
         </a>
-        <a href="../contacto.html" class="flex flex-col items-center text-eywa-700 text-xs" data-original="
-            &lt;i class=&quot;fas fa-calendar text-lg mb-1&quot;&gt;&lt;/i&gt;
-            Cita
-        " style="pointer-events: auto; cursor: text;">
+        <a href="../contacto.html" class="flex flex-col items-center text-eywa-700 text-xs">
             <i class="fas fa-calendar text-lg mb-1"></i>
             Cita
         </a>
@@ -488,163 +322,6 @@
             }
         });
     </script>
-
-
-
-    <script>
-        let isEditMode = false;
-        let originalContent = '';
-
-        const editToggleBtn = document.getElementById('editToggleBtn');
-        const editModeIndicator = document.getElementById('editModeIndicator');
-        const editorToolbar = document.getElementById('editorToolbar');
-        const notification = document.getElementById('notification');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            originalContent = document.body.innerHTML;
-            loadSavedContent();
-            setupEditables();
-        });
-
-        function toggleEditMode() {
-            isEditMode = !isEditMode;
-
-            if (isEditMode) {
-                editToggleBtn.classList.add('editing');
-                editToggleBtn.innerHTML = '<i class="fas fa-times"></i>';
-                editToggleBtn.title = 'Desactivar edición';
-                editModeIndicator.classList.add('active');
-                editorToolbar.classList.add('active');
-                document.body.classList.add('editable-highlight');
-                enableEditables();
-                showNotification('✏️ Modo edición activado');
-            } else {
-                editToggleBtn.classList.remove('editing');
-                editToggleBtn.innerHTML = '<i class="fas fa-pen"></i>';
-                editToggleBtn.title = 'Activar edición';
-                editModeIndicator.classList.remove('active');
-                editorToolbar.classList.remove('active');
-                document.body.classList.remove('editable-highlight');
-                disableEditables();
-                saveContent();
-            }
-        }
-
-        function setupEditables() {
-            // Hacer editables: títulos, párrafos, spans, enlaces, botones (excepto elementos del editor)
-            const selectors = 'h1, h2, h3, h4, h5, h6, p, span:not(.toolbar-header):not(.toolbar-btn span), a:not(.edit-toggle-btn):not(.toolbar-btn), button:not(.edit-toggle-btn):not(.toolbar-btn), li, td, th, label, strong, em';
-
-            document.querySelectorAll(selectors).forEach(el => {
-                // Verificar que no sea parte del editor
-                if (!el.closest('.editor-toolbar') && !el.closest('.edit-mode-indicator') && !el.closest('.edit-toggle-btn')) {
-                    el.setAttribute('contenteditable', 'true');
-                    el.setAttribute('data-original', el.innerHTML);
-
-                    el.addEventListener('blur', () => setTimeout(saveContent, 500));
-                }
-            });
-        }
-
-        function enableEditables() {
-            document.querySelectorAll('[contenteditable="true"]').forEach(el => {
-                el.style.pointerEvents = 'auto';
-                el.style.cursor = 'text';
-            });
-        }
-
-        function disableEditables() {
-            document.querySelectorAll('[contenteditable="true"]').forEach(el => {
-                el.style.pointerEvents = 'none';
-                el.style.cursor = 'default';
-            });
-        }
-
-        function formatDoc(cmd, value = null) {
-            if (!isEditMode) return;
-            document.execCommand(cmd, false, value);
-        }
-
-        function insertLink() {
-            if (!isEditMode) return;
-            const url = prompt('URL del enlace:', 'https://');
-            if (url) formatDoc('createLink', url);
-        }
-
-        function clearFormatting() {
-            if (!isEditMode) return;
-            formatDoc('removeFormat');
-        }
-
-        function saveContent() {
-            try {
-                localStorage.setItem('guia-arraigo-social-2026-editable_content', document.body.innerHTML);
-                localStorage.setItem('guia-arraigo-social-2026-editable_saved', new Date().toISOString());
-                showNotification('💾 Guardado');
-            } catch (e) {
-                showNotification('❌ Error al guardar');
-            }
-        }
-
-        function loadSavedContent() {
-            try {
-                const saved = localStorage.getItem('guia-arraigo-social-2026-editable_content');
-                if (saved) {
-                    document.body.innerHTML = saved;
-                    // Re-inicializar después de cargar
-                    setTimeout(setupEditables, 100);
-                }
-            } catch (e) {}
-        }
-
-        function resetContent() {
-            if (confirm('¿Restaurar contenido original?')) {
-                localStorage.removeItem('guia-arraigo-social-2026-editable_content');
-                location.reload();
-            }
-        }
-
-        function exportHTML() {
-            try {
-                const clone = document.documentElement.cloneNode(true);
-                clone.querySelectorAll('.editor-toolbar, .edit-toggle-btn, .edit-mode-indicator, .editor-notification').forEach(el => el.remove());
-                clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
-
-                const html = `<!DOCTYPE html>\n<html lang="es">\n${clone.innerHTML}\n</html>`;
-                const blob = new Blob([html], { type: 'text/html' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'guia-arraigo-social-2026-editable.html';
-                a.click();
-                URL.revokeObjectURL(url);
-                showNotification('📥 Exportado');
-            } catch (e) {
-                showNotification('❌ Error al exportar');
-            }
-        }
-
-        function showNotification(message) {
-            notification.textContent = message;
-            notification.classList.add('show');
-            setTimeout(() => notification.classList.remove('show'), 3000);
-        }
-
-        // Atajos
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
-                e.preventDefault();
-                toggleEditMode();
-            }
-            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                e.preventDefault();
-                if (isEditMode) saveContent();
-            }
-        });
-
-        // Auto-guardar
-        setInterval(() => { if (isEditMode) saveContent(); }, 30000);
-    </script>
-
 
 </body>
 </html>
